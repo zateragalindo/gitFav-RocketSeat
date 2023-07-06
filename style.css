@@ -1,0 +1,186 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+
+  
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+
+  --hue: 6;
+
+  --bg-search: rgba(var(--hue), 25, 29, 100%);
+  --bg-button: rgba(var(--hue), 94, 124, 100%);
+
+  --text-color: rgb(225, 225, 230);
+  --text-search: rgb(124, 124, 138);
+  --text-remove: rgb(247, 90, 104);
+
+  --bg-theader: rgba(var(--hue), 45, 56, 100%);
+  --bg-tableOdd: rgba(var(--hue), 22, 27, 50%);
+  --bg-tableEven: rgba(var(--hue), 24, 28, 100%);
+  --bc-tableBorder: rgba(var(--hue), 128, 140, 100%);
+
+  --bg-body: rgba(var(--hue), 0, 0, 100%);
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-body);
+}
+body * {
+  font-family: var(--ff-primary);
+
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--bg-button);
+  border-radius: .4rem;
+  border: none;
+
+  padding: 1.6rem;
+
+  height: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+button svg {
+  height: 2.4rem;
+}
+
+input {
+  width: 46.2rem;
+  height: 4.8rem;
+  padding: 1.6rem;
+
+  background-color: var(--bg-search);
+  border: none;
+  
+  outline: none;
+
+  border-radius: .4rem;
+
+  font-size: 1.6rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  width: 1120px;
+  margin: 11.5rem auto;
+  padding: 2rem;
+}
+
+header {
+  height: 4.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 4.8rem;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+}
+
+.search button {
+  width: 17rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  box-shadow: 0 0.5rem 1rem -1rem rgba(247, 243, 243, 0.38);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+table th {
+  background: var(--bg-theader);
+  height: 6.4rem;
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(odd) {
+  background: var(--bg-tableOdd);
+}
+table tr:nth-child(even) {
+  background: var(--bg-tableEven);
+}
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user p {
+  font-weight: bold;
+}
+
+
+.buttonRemove button {
+  background-color: transparent;
+  color: var(--text-remove);
+  padding: 0;
+}
